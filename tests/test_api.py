@@ -1,7 +1,6 @@
 import pytest
 from fastapi.testclient import TestClient
-
-from app.main import app
+from app.main import app, APP_VERSION
 
 
 @pytest.fixture(scope="module")
@@ -63,3 +62,9 @@ def test_predict_missing_field(client):
     payload = {"sepal_length": 5.1, "sepal_width": 3.5}
     response = client.post("/predict", json=payload)
     assert response.status_code == 422
+    
+# ---------- /version ----------
+def test_version(client):
+    response = client.get("/version")
+    assert response.status_code == 200
+    assert response.json() == {"version": APP_VERSION}
