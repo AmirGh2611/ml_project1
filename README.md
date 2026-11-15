@@ -1,4 +1,4 @@
-# Iris Classifier API
+# Iris Classifier Api
 یه API ساده با **FastAPI** که یه مدل طبقه‌بندی آموزش‌دیده روی دیتاست **Iris** رو سرو می‌کنه. مدل با `scikit-learn` آموزش دیده (رگرسیون لجستیک + StandardScaler) و با `joblib` ذخیره شده.
 
 ## پیش‌نیازها
