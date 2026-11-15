@@ -22,7 +22,7 @@ project/
 │   ├── __init__.py
 │   └── test_api.py
 ├── pytest.ini
-└── requirements.txt6
+└── requirements.txt
 ```
 
 ## اجرا
